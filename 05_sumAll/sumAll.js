@@ -4,15 +4,20 @@ const sumAll = function(startNum, endNum) {
 
     // Create a variable to hold the final sum
     let sum = 0;
+    
     let start = 0;
     let end = 0;
+    
+    // declaring variables to check if input is valid integer 
     let startIntCheck = Number.isInteger(startNum);
     let endIntCheck = Number.isInteger(endNum);
 
+    // condition to return when input is invalid
     if (startNum < 0 || endNum < 0 || startIntCheck === false || endIntCheck === false){
         return "ERROR"
     }
 
+    // condition to reassign start and end if starting number is larger
     if (startNum > endNum){
         start = endNum
         end = startNum
